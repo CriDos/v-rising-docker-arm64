@@ -35,7 +35,7 @@ FROM debian:${debian_version}-slim
 
 ENV DEBIAN_FRONTEND="noninteractive"
 
-LABEL maintainer="joaop221"
+LABEL maintainer="cridos"
 
 # Install libraries needed to run box and v-rising
 # - `cabextract` is needed by winetricks to install most libraries
@@ -80,7 +80,7 @@ ARG debian_version=bookworm
 # see: https://dl.winehq.org/wine-builds/debian/dists/<debian_version>/main/binary-amd64/ - e.g.:
 # - https://dl.winehq.org/wine-builds/debian/dists/bookworm/main/binary-amd64/
 # - https://dl.winehq.org/wine-builds/debian/dists/bullseye/main/binary-amd64/
-ARG wine_version="9.0.0.0"
+ARG wine_version="10.0.0.0"
 # devel, staging, or stable
 ARG wine_branch="stable"
 # : -1 (some wine .deb files have -1 tag on the end and some don't)
